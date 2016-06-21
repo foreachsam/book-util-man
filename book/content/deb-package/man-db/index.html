@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+
+<title>man-db - man 使用筆記</title>
+
+
+<link rel="canonical" href="https://foreachsam.github.io/book-util-man/book/content/deb-package/man-db/">
+
+
+<meta name="author" content="foreachsam">
+
+
+<meta property="og:url" content="https://foreachsam.github.io/book-util-man/book/content/deb-package/man-db/">
+<meta property="og:title" content="man-db - man 使用筆記">
+
+<meta name="apple-mobile-web-app-title" content="man-db - man 使用筆記">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../assets/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="../../../../../../assets/images/favicon.ico">
+<style>
+	@font-face {
+		font-family: 'Icon';
+		src: url('../../../assets/fonts/icon.eot?52m981');
+		src: url('../../../assets/fonts/icon.eot?#iefix52m981') format('embedded-opentype'),
+		url('../../../assets/fonts/icon.woff?52m981') format('woff'),
+		url('../../../assets/fonts/icon.ttf?52m981') format('truetype'),
+		url('../../../assets/fonts/icon.svg?52m981#icon') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+</style>
+<link rel="stylesheet" href="../../../assets/stylesheets/application-0dac3e5884.css"> 
+<link rel="stylesheet" href="../../../assets/stylesheets/palettes-05ab2406df.css">     
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+<style>
+	body,
+	input {
+		font-family: 'Roboto',
+		Helvetica,
+		Arial,
+		sans-serif;
+	}
+
+	pre,
+	code {
+		font-family: 'Roboto Mono',
+		'Courier New',
+		'Courier',
+		monospace;
+	}
+</style>
+ 
+<script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+
+
+</head>
+
+
+  
+
+<body class="palette-primary-blue palette-accent-light-blue">
+	
+	<div class="backdrop">
+		<div class="backdrop-paper"></div>
+	</div>
+	<input class="toggle" type="checkbox" id="toggle-drawer">
+	<input class="toggle" type="checkbox" id="toggle-search">
+	<label class="toggle-button overlay" for="toggle-drawer"></label>
+	<header class="header">
+		<nav aria-label="Header">
+	<div class="bar default">
+		<div class="button button-menu" role="button" aria-label="Menu">
+			<label class="toggle-button icon icon-menu" for="toggle-drawer">
+				<span></span>
+			</label>
+		</div>
+		<div class="stretch">
+			<div class="title">
+				
+				<span class="path">
+            
+              
+                deb package <i class="icon icon-link"></i>
+              
+            
+          </span>  man-db
+			</div>
+		</div>
+		  
+		<div class="button button-github" role="button" aria-label="GitHub">
+			<a href="https://github.com/foreachsam/book-util-man" title="@foreachsam/book-util-man on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+		</div>
+		
+		<div class="button button-search" role="button" aria-label="Search">
+			<label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+		</div>
+	</div>
+	<div class="bar search">
+		<div class="button button-close" role="button" aria-label="Close">
+			<label class="toggle-button icon icon-back" for="toggle-search"></label>
+		</div>
+		<div class="stretch">
+			<div class="field">
+				<input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+			</div>
+		</div>
+		<div class="button button-reset" role="button" aria-label="Search">
+			<button class="toggle-button icon icon-close" id="reset-search"></button>
+		</div>
+	</div>
+</nav>
+	</header>
+	<main class="main">
+		
+		<div class="drawer">
+			<nav aria-label="Navigation">
+
+	<a href="https://foreachsam.github.io/book-util-man/book" class="project" title="man 使用筆記">
+		<div class="banner">
+
+			<div class="name">
+				<strong>man 使用筆記<span class="version"></span></strong>
+
+			</div>
+		</div>
+	</a>
+	<div class="scrollable">
+		<div class="wrapper">
+
+			<div class="toc">
+				<ul>
+
+	
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="首頁" href="../../.." itemprop="url">
+			首頁
+    	</a>
+	</div>
+	
+</li>
+
+
+	
+<li>
+	<span class="section">參考文件</span>
+	<ul>
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="manual" href="../../reference/manual/" itemprop="url">
+			manual
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+	</ul>
+</li>
+
+
+	
+<li>
+	<span class="section">deb package</span>
+	<ul>
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="index" href="../" itemprop="url">
+			index
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a class="current" title="man-db" href="./" itemprop="url">
+			man-db
+    	</a>
+	</div>
+	    
+	<ul>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="下載套件" href="#_1" >
+                	下載套件
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="解開套件" href="#_2" >
+                	解開套件
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="觀看資料夾結構" href="#_3" >
+                	觀看資料夾結構
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="manpage" href="#manpage" >
+                	manpage
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="下載 Source Package" href="#source-package" >
+                	下載 Source Package
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="套件資訊" href="#_4" >
+                	套件資訊
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="原始碼套件資訊" href="#_5" >
+                	原始碼套件資訊
+				</a>
+			</div>
+		</li>
+		
+	</ul>
+	 
+</li>
+
+
+		
+	</ul>
+</li>
+
+
+	
+<li>
+	<span class="section">command</span>
+	<ul>
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="man" href="../../command/man/" itemprop="url">
+			man
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+	</ul>
+</li>
+
+
+				</ul>
+
+				<hr>
+				<span class="section">The author</span>
+				<ul>
+	
+					<li>
+						<a href="https://foreachsam.github.io/" target="_blank" title="foreachsam">
+                  			foreachsam
+            			</a>
+					</li>
+	
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</nav>
+		</div>
+		<article class="article">
+			<div class="wrapper">
+				 <h1 id="man-db">man-db 套件探索</h1>
+<h2 id="_1">下載套件</h2>
+<p>下載「<a href="http://packages.ubuntu.com/xenial/man-db">man-db</a>」這個套件。</p>
+<pre class="code"><code class="language-sh">$ apt download man-db</code></pre>
+
+
+<h2 id="_2">解開套件</h2>
+<p>解開「man-db_2.7.5-1_amd64.deb」</p>
+<pre class="code"><code class="language-sh">$ dpkg -x man-db_2.7.5-1_amd64.deb man-db</code></pre>
+
+
+<h2 id="_3">觀看資料夾結構</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ tree man-db</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>man-db
+├── etc
+│   ├── cron.daily
+│   │   └── man-db
+│   ├── cron.weekly
+│   │   └── man-db
+│   └── manpath.config
+├── usr
+│   ├── bin
+│   │   ├── apropos -&gt; whatis
+│   │   ├── catman
+│   │   ├── lexgrog
+│   │   ├── man
+│   │   ├── mandb
+│   │   ├── manpath
+│   │   └── whatis
+│   ├── lib
+│   │   ├── man-db
+│   │   │   ├── globbing
+│   │   │   ├── libman-2.7.5.so
+│   │   │   ├── libmandb-2.7.5.so
+│   │   │   ├── libmandb.so -&gt; libmandb-2.7.5.so
+│   │   │   ├── libman.so -&gt; libman-2.7.5.so
+│   │   │   ├── man -&gt; ../../bin/man
+│   │   │   ├── manconv
+│   │   │   ├── mandb -&gt; ../../bin/mandb
+│   │   │   └── zsoelim
+│   │   ├── mime
+│   │   │   └── packages
+│   │   │       └── man-db
+│   │   └── tmpfiles.d
+│   │       └── man-db.conf
+│   ├── sbin
+│   │   └── accessdb
+│   └── share
+│       ├── bug
+│       │   └── man-db
+│       │       └── presubj
+│       ├── doc
+│       │   └── man-db
+│       │       ├── ChangeLog-2013.gz
+│       │       ├── changelog.Debian.gz
+│       │       ├── copyright
+│       │       ├── examples
+│       │       │   ├── manpage.example
+│       │       │   ├── manpage.example.mdoc
+│       │       │   ├── manpage.example.pod
+│       │       │   ├── manpage.example.sgml.gz
+│       │       │   └── manpath.config.gz
+│       │       ├── FAQ
+│       │       ├── man-db-manual.ps.gz
+│       │       ├── man-db-manual.txt.gz
+│       │       ├── NEWS.gz
+│       │       ├── README.gz
+│       │       ├── THANKS
+│       │       └── TODO
+│       ├── doc-base
+│       │   └── man-db
+│       ├── lintian
+│       │   └── overrides
+│       │       └── man-db
+│       ├── man
+│       │   ├── da
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── de
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── es
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── fr
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── id
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── it
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── ja
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── man1
+│       │   │   ├── apropos.1.gz
+│       │   │   ├── lexgrog.1.gz
+│       │   │   ├── man.1.gz
+│       │   │   ├── manconv.1.gz
+│       │   │   ├── manpath.1.gz
+│       │   │   ├── whatis.1.gz
+│       │   │   └── zsoelim.1.gz
+│       │   ├── man5
+│       │   │   └── manpath.5.gz
+│       │   ├── man8
+│       │   │   ├── accessdb.8.gz
+│       │   │   ├── catman.8.gz
+│       │   │   └── mandb.8.gz
+│       │   ├── nl
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── pl
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   ├── ru
+│       │   │   ├── man1
+│       │   │   │   ├── apropos.1.gz
+│       │   │   │   ├── lexgrog.1.gz
+│       │   │   │   ├── man.1.gz
+│       │   │   │   ├── manconv.1.gz
+│       │   │   │   ├── manpath.1.gz
+│       │   │   │   ├── whatis.1.gz
+│       │   │   │   └── zsoelim.1.gz
+│       │   │   ├── man5
+│       │   │   │   └── manpath.5.gz
+│       │   │   └── man8
+│       │   │       ├── accessdb.8.gz
+│       │   │       ├── catman.8.gz
+│       │   │       └── mandb.8.gz
+│       │   └── zh_CN
+│       │       ├── man1
+│       │       │   ├── apropos.1.gz
+│       │       │   ├── lexgrog.1.gz
+│       │       │   ├── man.1.gz
+│       │       │   ├── manconv.1.gz
+│       │       │   ├── manpath.1.gz
+│       │       │   ├── whatis.1.gz
+│       │       │   └── zsoelim.1.gz
+│       │       ├── man5
+│       │       │   └── manpath.5.gz
+│       │       └── man8
+│       │           ├── accessdb.8.gz
+│       │           ├── catman.8.gz
+│       │           └── mandb.8.gz
+│       └── man-db
+│           └── chconfig
+└── var
+    ├── cache
+    │   └── man
+    └── lib
+        └── man-db
+
+74 directories, 168 files</code></pre>
+
+
+<p>若有安裝這個套件的話，可執行</p>
+<pre class="code"><code class="language-sh">$ dpkg -L man-db</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/.
+/usr
+/usr/share
+/usr/share/doc-base
+/usr/share/doc-base/man-db
+/usr/share/bug
+/usr/share/bug/man-db
+/usr/share/bug/man-db/presubj
+/usr/share/man-db
+/usr/share/man-db/chconfig
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/man-db
+/usr/share/doc
+/usr/share/doc/man-db
+/usr/share/doc/man-db/THANKS
+/usr/share/doc/man-db/FAQ
+/usr/share/doc/man-db/examples
+/usr/share/doc/man-db/examples/manpage.example
+/usr/share/doc/man-db/examples/manpath.config.gz
+/usr/share/doc/man-db/examples/manpage.example.mdoc
+/usr/share/doc/man-db/examples/manpage.example.pod
+/usr/share/doc/man-db/examples/manpage.example.sgml.gz
+/usr/share/doc/man-db/man-db-manual.ps.gz
+/usr/share/doc/man-db/man-db-manual.txt.gz
+/usr/share/doc/man-db/TODO
+/usr/share/doc/man-db/copyright
+/usr/share/doc/man-db/README.gz
+/usr/share/doc/man-db/NEWS.gz
+/usr/share/doc/man-db/changelog.Debian.gz
+/usr/share/doc/man-db/ChangeLog-2013.gz
+/usr/share/man
+/usr/share/man/pl
+/usr/share/man/pl/man5
+/usr/share/man/pl/man5/manpath.5.gz
+/usr/share/man/pl/man1
+/usr/share/man/pl/man1/lexgrog.1.gz
+/usr/share/man/pl/man1/manconv.1.gz
+/usr/share/man/pl/man1/apropos.1.gz
+/usr/share/man/pl/man1/man.1.gz
+/usr/share/man/pl/man1/zsoelim.1.gz
+/usr/share/man/pl/man1/manpath.1.gz
+/usr/share/man/pl/man1/whatis.1.gz
+/usr/share/man/pl/man8
+/usr/share/man/pl/man8/catman.8.gz
+/usr/share/man/pl/man8/accessdb.8.gz
+/usr/share/man/pl/man8/mandb.8.gz
+/usr/share/man/it
+/usr/share/man/it/man5
+/usr/share/man/it/man5/manpath.5.gz
+/usr/share/man/it/man1
+/usr/share/man/it/man1/apropos.1.gz
+/usr/share/man/it/man1/man.1.gz
+/usr/share/man/it/man1/zsoelim.1.gz
+/usr/share/man/it/man1/manpath.1.gz
+/usr/share/man/it/man1/whatis.1.gz
+/usr/share/man/it/man8
+/usr/share/man/it/man8/catman.8.gz
+/usr/share/man/it/man8/accessdb.8.gz
+/usr/share/man/it/man8/mandb.8.gz
+/usr/share/man/man5
+/usr/share/man/man5/manpath.5.gz
+/usr/share/man/de
+/usr/share/man/de/man5
+/usr/share/man/de/man5/manpath.5.gz
+/usr/share/man/de/man1
+/usr/share/man/de/man1/lexgrog.1.gz
+/usr/share/man/de/man1/manconv.1.gz
+/usr/share/man/de/man1/apropos.1.gz
+/usr/share/man/de/man1/man.1.gz
+/usr/share/man/de/man1/zsoelim.1.gz
+/usr/share/man/de/man1/manpath.1.gz
+/usr/share/man/de/man1/whatis.1.gz
+/usr/share/man/de/man8
+/usr/share/man/de/man8/catman.8.gz
+/usr/share/man/de/man8/accessdb.8.gz
+/usr/share/man/de/man8/mandb.8.gz
+/usr/share/man/man1
+/usr/share/man/man1/lexgrog.1.gz
+/usr/share/man/man1/manconv.1.gz
+/usr/share/man/man1/apropos.1.gz
+/usr/share/man/man1/man.1.gz
+/usr/share/man/man1/zsoelim.1.gz
+/usr/share/man/man1/manpath.1.gz
+/usr/share/man/man1/whatis.1.gz
+/usr/share/man/es
+/usr/share/man/es/man5
+/usr/share/man/es/man5/manpath.5.gz
+/usr/share/man/es/man1
+/usr/share/man/es/man1/apropos.1.gz
+/usr/share/man/es/man1/man.1.gz
+/usr/share/man/es/man1/zsoelim.1.gz
+/usr/share/man/es/man1/manpath.1.gz
+/usr/share/man/es/man1/whatis.1.gz
+/usr/share/man/es/man8
+/usr/share/man/es/man8/catman.8.gz
+/usr/share/man/es/man8/mandb.8.gz
+/usr/share/man/man8
+/usr/share/man/man8/catman.8.gz
+/usr/share/man/man8/accessdb.8.gz
+/usr/share/man/man8/mandb.8.gz
+/usr/share/man/da
+/usr/share/man/da/man5
+/usr/share/man/da/man5/manpath.5.gz
+/usr/share/man/da/man1
+/usr/share/man/da/man1/lexgrog.1.gz
+/usr/share/man/da/man1/manconv.1.gz
+/usr/share/man/da/man1/apropos.1.gz
+/usr/share/man/da/man1/man.1.gz
+/usr/share/man/da/man1/zsoelim.1.gz
+/usr/share/man/da/man1/manpath.1.gz
+/usr/share/man/da/man1/whatis.1.gz
+/usr/share/man/da/man8
+/usr/share/man/da/man8/catman.8.gz
+/usr/share/man/da/man8/accessdb.8.gz
+/usr/share/man/da/man8/mandb.8.gz
+/usr/share/man/zh_CN
+/usr/share/man/zh_CN/man5
+/usr/share/man/zh_CN/man5/manpath.5.gz
+/usr/share/man/zh_CN/man1
+/usr/share/man/zh_CN/man1/lexgrog.1.gz
+/usr/share/man/zh_CN/man1/manconv.1.gz
+/usr/share/man/zh_CN/man1/apropos.1.gz
+/usr/share/man/zh_CN/man1/man.1.gz
+/usr/share/man/zh_CN/man1/zsoelim.1.gz
+/usr/share/man/zh_CN/man1/manpath.1.gz
+/usr/share/man/zh_CN/man1/whatis.1.gz
+/usr/share/man/zh_CN/man8
+/usr/share/man/zh_CN/man8/catman.8.gz
+/usr/share/man/zh_CN/man8/accessdb.8.gz
+/usr/share/man/zh_CN/man8/mandb.8.gz
+/usr/share/man/ja
+/usr/share/man/ja/man5
+/usr/share/man/ja/man5/manpath.5.gz
+/usr/share/man/ja/man1
+/usr/share/man/ja/man1/lexgrog.1.gz
+/usr/share/man/ja/man1/manconv.1.gz
+/usr/share/man/ja/man1/apropos.1.gz
+/usr/share/man/ja/man1/man.1.gz
+/usr/share/man/ja/man1/zsoelim.1.gz
+/usr/share/man/ja/man1/manpath.1.gz
+/usr/share/man/ja/man1/whatis.1.gz
+/usr/share/man/ja/man8
+/usr/share/man/ja/man8/catman.8.gz
+/usr/share/man/ja/man8/accessdb.8.gz
+/usr/share/man/ja/man8/mandb.8.gz
+/usr/share/man/ru
+/usr/share/man/ru/man5
+/usr/share/man/ru/man5/manpath.5.gz
+/usr/share/man/ru/man1
+/usr/share/man/ru/man1/lexgrog.1.gz
+/usr/share/man/ru/man1/manconv.1.gz
+/usr/share/man/ru/man1/apropos.1.gz
+/usr/share/man/ru/man1/man.1.gz
+/usr/share/man/ru/man1/zsoelim.1.gz
+/usr/share/man/ru/man1/manpath.1.gz
+/usr/share/man/ru/man1/whatis.1.gz
+/usr/share/man/ru/man8
+/usr/share/man/ru/man8/catman.8.gz
+/usr/share/man/ru/man8/accessdb.8.gz
+/usr/share/man/ru/man8/mandb.8.gz
+/usr/share/man/nl
+/usr/share/man/nl/man5
+/usr/share/man/nl/man5/manpath.5.gz
+/usr/share/man/nl/man1
+/usr/share/man/nl/man1/lexgrog.1.gz
+/usr/share/man/nl/man1/manconv.1.gz
+/usr/share/man/nl/man1/apropos.1.gz
+/usr/share/man/nl/man1/man.1.gz
+/usr/share/man/nl/man1/zsoelim.1.gz
+/usr/share/man/nl/man1/manpath.1.gz
+/usr/share/man/nl/man1/whatis.1.gz
+/usr/share/man/nl/man8
+/usr/share/man/nl/man8/catman.8.gz
+/usr/share/man/nl/man8/accessdb.8.gz
+/usr/share/man/nl/man8/mandb.8.gz
+/usr/share/man/id
+/usr/share/man/id/man5
+/usr/share/man/id/man5/manpath.5.gz
+/usr/share/man/id/man1
+/usr/share/man/id/man1/lexgrog.1.gz
+/usr/share/man/id/man1/manconv.1.gz
+/usr/share/man/id/man1/apropos.1.gz
+/usr/share/man/id/man1/man.1.gz
+/usr/share/man/id/man1/zsoelim.1.gz
+/usr/share/man/id/man1/manpath.1.gz
+/usr/share/man/id/man1/whatis.1.gz
+/usr/share/man/id/man8
+/usr/share/man/id/man8/catman.8.gz
+/usr/share/man/id/man8/accessdb.8.gz
+/usr/share/man/id/man8/mandb.8.gz
+/usr/share/man/fr
+/usr/share/man/fr/man5
+/usr/share/man/fr/man5/manpath.5.gz
+/usr/share/man/fr/man1
+/usr/share/man/fr/man1/lexgrog.1.gz
+/usr/share/man/fr/man1/manconv.1.gz
+/usr/share/man/fr/man1/apropos.1.gz
+/usr/share/man/fr/man1/man.1.gz
+/usr/share/man/fr/man1/zsoelim.1.gz
+/usr/share/man/fr/man1/manpath.1.gz
+/usr/share/man/fr/man1/whatis.1.gz
+/usr/share/man/fr/man8
+/usr/share/man/fr/man8/catman.8.gz
+/usr/share/man/fr/man8/accessdb.8.gz
+/usr/share/man/fr/man8/mandb.8.gz
+/usr/bin
+/usr/bin/mandb
+/usr/bin/whatis
+/usr/bin/manpath
+/usr/bin/lexgrog
+/usr/bin/man
+/usr/bin/catman
+/usr/lib
+/usr/lib/man-db
+/usr/lib/man-db/libman-2.7.5.so
+/usr/lib/man-db/globbing
+/usr/lib/man-db/libmandb-2.7.5.so
+/usr/lib/man-db/zsoelim
+/usr/lib/man-db/manconv
+/usr/lib/mime
+/usr/lib/mime/packages
+/usr/lib/mime/packages/man-db
+/usr/lib/tmpfiles.d
+/usr/lib/tmpfiles.d/man-db.conf
+/usr/sbin
+/usr/sbin/accessdb
+/etc
+/etc/manpath.config
+/etc/cron.weekly
+/etc/cron.weekly/man-db
+/etc/cron.daily
+/etc/cron.daily/man-db
+/var
+/var/lib
+/var/lib/man-db
+/var/cache
+/var/cache/man
+/usr/bin/apropos
+/usr/lib/man-db/mandb
+/usr/lib/man-db/libmandb.so
+/usr/lib/man-db/libman.so
+/usr/lib/man-db/man</code></pre>
+
+
+<h2 id="manpage">manpage</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ dpkg -L man-db | grep '/man/man.*/' | sort</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/usr/share/man/man1/apropos.1.gz
+/usr/share/man/man1/lexgrog.1.gz
+/usr/share/man/man1/man.1.gz
+/usr/share/man/man1/manconv.1.gz
+/usr/share/man/man1/manpath.1.gz
+/usr/share/man/man1/whatis.1.gz
+/usr/share/man/man1/zsoelim.1.gz
+/usr/share/man/man5/manpath.5.gz
+/usr/share/man/man8/accessdb.8.gz
+/usr/share/man/man8/catman.8.gz
+/usr/share/man/man8/mandb.8.gz</code></pre>
+
+
+<ul>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/apropos.1.html">apropos</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/lexgrog.1.html">lexgrog</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/man.1.html">man</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/manconv.1.html">manconv</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/manpath.1.html">manpath</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/whatis.1.html">whatis</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/zsoelim.1.html">zsoelim</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man5/manpath.5.html">manpath</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man8/accessdb.8.html">accessdb</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man8/catman.8.html">catman</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/xenial/en/man8/mandb.8.html">mandb</a></li>
+</ul>
+<h2 id="source-package">下載 Source Package</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ apt source man-db</code></pre>
+
+
+<p>會下載「<a href="http://packages.ubuntu.com/source/xenial/man-db">man-db</a>」這個「Source Package」</p>
+<h2 id="_4">套件資訊</h2>
+<p>網址: <a href="http://packages.ubuntu.com/xenial/man-db">http://packages.ubuntu.com/xenial/man-db</a></p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ apt show man-db</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Package: man-db
+Version: 2.7.5-1
+Priority: standard
+Section: doc
+Origin: Ubuntu
+Maintainer: Colin Watson &lt;cjwatson@debian.org&gt;
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2,138 kB
+Provides: man, man-browser
+Pre-Depends: dpkg (&gt;= 1.16.1~)
+Depends: groff-base (&gt;= 1.18.1.1-15), bsdmainutils, debconf (&gt;= 1.2.0) | debconf-2.0, libc6 (&gt;= 2.17), libgdbm3 (&gt;= 1.8.3), libpipeline1 (&gt;= 1.4.0), zlib1g (&gt;= 1:1.1.4)
+Suggests: groff, less, www-browser
+Conflicts: man, suidmanager (&lt;&lt; 0.50)
+Breaks: manpages-zh (&lt;&lt; 1.5.2-1.1)
+Replaces: man, manpages-de (&lt;&lt; 0.5-4), manpages-zh (&lt;&lt; 1.5.2-1.1), nlsutils
+Homepage: http://man-db.nongnu.org/
+Task: standard, mythbuntu-backend-master, ubuntu-sdk
+Supported: 5y
+Download-Size: 854 kB
+APT-Manual-Installed: yes
+APT-Sources: http://tw.archive.ubuntu.com/ubuntu xenial/main amd64 Packages
+Description: on-line manual pager
+ This package provides the man command, the primary way of examining the
+ on-line help files (manual pages). Other utilities provided include the
+ whatis and apropos commands for searching the manual page database, the
+ manpath utility for determining the manual page search path, and the
+ maintenance utilities mandb, catman and zsoelim. man-db uses the groff
+ suite of programs to format and display the manual pages.</code></pre>
+
+
+<h2 id="_5">原始碼套件資訊</h2>
+<p>網址: <a href="http://packages.ubuntu.com/source/xenial/man-db">http://packages.ubuntu.com/source/xenial/man-db</a></p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ apt showsrc man-db</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Package: man-db
+Binary: man-db
+Version: 2.7.5-1
+Priority: standard
+Section: doc
+Maintainer: Colin Watson &lt;cjwatson@debian.org&gt;
+Build-Depends: dpkg (&gt;= 1.16.1~), debhelper (&gt;= 9~), flex, groff, libgdbm-dev, po4a, zlib1g-dev, libpipeline-dev (&gt;= 1.4.0), pkg-config, dh-autoreconf, autopoint
+Architecture: any
+Standards-Version: 3.9.6
+Format: 3.0 (quilt)
+Directory: pool/main/m/man-db
+Files:
+ 3724ca94c891e349d4cfbb5336204b83 1988 man-db_2.7.5-1.dsc
+ 37da0bb0400cc7b640f33c26f6052202 1505428 man-db_2.7.5.orig.tar.xz
+ 58cd3ccc543648c3611461bb6d16e0d7 258104 man-db_2.7.5-1.debian.tar.xz
+Homepage: http://man-db.nongnu.org/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-man-db/man-db.git
+Vcs-Git: git://anonscm.debian.org/pkg-man-db/man-db.git
+Package-List:
+ man-db deb doc important arch=any
+Checksums-Sha1:
+ 7c15435e942803452b147740d9e0396a3cd3f3d8 1988 man-db_2.7.5-1.dsc
+ fd1314f616e055ddde0c02db219f5c9426a0ee5f 1505428 man-db_2.7.5.orig.tar.xz
+ 6b3a3f8f5f2b2454f6edf698bd3439221bb14ddd 258104 man-db_2.7.5-1.debian.tar.xz
+Checksums-Sha256:
+ 489071c801f47b76778de13fef3d07944386d1be9428f9b89c2fda7fd6bf43d4 1988 man-db_2.7.5-1.dsc
+ 5c4ddd0d67abbbcb408dc5804906f62210f7c863ef791198faca3d75681cca14 1505428 man-db_2.7.5.orig.tar.xz
+ 63882447cd506889f3f389230abf03ecbe1bfc2c78844c4adea230e072dcee5d 258104 man-db_2.7.5-1.debian.tar.xz</code></pre>
+				<aside class="copyright" role="note">
+					 Copyright (c) foreachsam &ndash;  Documentation built with
+					<a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using the
+					<a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a> theme.
+				</aside>
+				
+				<footer class="footer">
+					
+<nav class="pagination" aria-label="Footer">
+	<div class="previous">
+		
+		<a href="../" title="index">
+			<span class="direction">
+            上一頁
+          </span>
+			<div class="page">
+				<div class="button button-previous" role="button" aria-label="Previous">
+					<i class="icon icon-back"></i>
+				</div>
+				<div class="stretch">
+					<div class="title">
+						index
+					</div>
+				</div>
+			</div>
+		</a>
+		
+	</div>
+	<div class="next">
+		
+		<a href="../../command/man/" title="man">
+			<span class="direction">
+            下一頁
+          </span>
+			<div class="page">
+				<div class="stretch">
+					<div class="title">
+						man
+					</div>
+				</div>
+				<div class="button button-next" role="button" aria-label="Next">
+					<i class="icon icon-forward"></i>
+				</div>
+			</div>
+		</a>
+		
+	</div>
+</nav>
+
+				</footer>
+				
+			</div>
+		</article>
+		<div class="results" role="status" aria-live="polite">
+			<div class="scrollable">
+				<div class="wrapper">
+					<div class="meta"></div>
+					<div class="list"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		var base_url = '../../..';
+		var repo_id = '';
+	</script>
+	<script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+	
+
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document,
+		'script', '//www.google-analytics.com/analytics.js', 'ga');
+	/* General initialization */
+	ga('create', 'UA-56999876-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+	/* Track outbound links */
+	var buttons = document.querySelectorAll('a');
+	Array.prototype.map.call(buttons, function(item) {
+		if (item.host != document.location.host) {
+			item.addEventListener('click', function() {
+				var action = item.getAttribute('data-action') || 'follow';
+				ga('send', 'event', 'outbound', action, item.href);
+			});
+		}
+	});
+	/* Register handler to log search on blur */
+	var query = document.querySelector('.query');
+	query.addEventListener('blur', function() {
+		if (this.value) {
+			var path = document.location.pathname;
+			ga('send', 'pageview', path + '?q=' + this.value);
+		}
+	});
+</script>
+
+
+</body>
+
+</html>
