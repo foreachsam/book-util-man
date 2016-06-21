@@ -2,13 +2,18 @@
     "docs": [
         {
             "location": "/",
-            "text": "man \u4f7f\u7528\u7b46\u8a18\n\n\n\u9019\u662f\u4f7f\u7528\u300c\nman\n\u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002\n\n\n\u74b0\u5883\n\n\n\n\nXubuntu 16.04 64\u4f4d\u5143",
+            "text": "man \u4f7f\u7528\u7b46\u8a18\n\n\n\u9019\u662f\u4f7f\u7528\u300c\nman\n\u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002\n\n\n\u59ca\u59b9\u7bc7\u300c\nmanpages \u7d22\u5f15\n\u300d\u3002\n\n\nintro\n\n\n\n\n$ man 1 \nintro\n\n\n$ man 2 \nintro\n\n\n$ man 3 \nintro\n\n\n$ man 4 \nintro\n\n\n$ man 5 \nintro\n\n\n$ man 6 \nintro\n\n\n$ man 7 \nintro\n\n\n$ man 8 \nintro\n\n\n\n\n\u74b0\u5883\n\n\n\n\nXubuntu 16.04 64\u4f4d\u5143",
             "title": "\u9996\u9801"
         },
         {
             "location": "/#man",
-            "text": "\u9019\u662f\u4f7f\u7528\u300c man \u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002",
+            "text": "\u9019\u662f\u4f7f\u7528\u300c man \u300d\u7684\u7c21\u55ae\u7d00\u9304\u3002  \u59ca\u59b9\u7bc7\u300c manpages \u7d22\u5f15 \u300d\u3002",
             "title": "man \u4f7f\u7528\u7b46\u8a18"
+        },
+        {
+            "location": "/#intro",
+            "text": "$ man 1  intro  $ man 2  intro  $ man 3  intro  $ man 4  intro  $ man 5  intro  $ man 6  intro  $ man 7  intro  $ man 8  intro",
+            "title": "intro"
         },
         {
             "location": "/#_1",
